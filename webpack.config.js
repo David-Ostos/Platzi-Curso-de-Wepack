@@ -10,7 +10,17 @@ module.exports = {
     clean: true                                   // se utiliza para qeu limpie automaticamente la carpeta dist dist
   },
   resolve: {
-
     extensions: ['.js']                            /* para poder identificar los archivos que tiene que seguir */
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,                  // se utiliza para que le haga test a todos los archivos js y mjs, donde ? significa "o"
+        exclude: /node_modules/,         // para excluir las carpetas que no queremos que modifique como los node:modules
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
   }
 };

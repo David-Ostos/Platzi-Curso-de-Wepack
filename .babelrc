@@ -1,0 +1,8 @@
+{
+  "presets":[
+    "@babel/preset-env"                     // se utiliza para poder utilizar este preset que es para utilizar js moderno se pueden agregar ene cantidad de utilidades por eso esta entre corchetes
+  ],
+  "plugins":[
+    "@babel/plugin-transform-runtime"   // se utiliza de la misma manera que los presets pero para los pluging
+  ]
+}
