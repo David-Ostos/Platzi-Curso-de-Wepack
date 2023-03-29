@@ -4,11 +4,12 @@
   "description": "A minimal portfolio with Vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gndx/js-portfolio.git"
+    "url": "git+https://github.com/David-Ostos/Platzi-Curso-de-Wepack"
   },
   "keywords": [
     "javascript",
@@ -20,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/gndx/js-portfolio/issues"
   },
-  "homepage": "https://github.com/gndx/js-portfolio#readme"
+  "homepage": "https://github.com/gndx/js-portfolio#readme",
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  }
 }
