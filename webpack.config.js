@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',                                         // es la direccion donde se vas an a ejecutar el js, que es lo que prepara webpack
@@ -70,7 +71,8 @@ module.exports = {
           to: 'assets/images'
         }
       ]
-    })
+    }),
+    new Dotenv()
   ],
   optimization: {                             // aqui se crea la estructura para la automatizacion
     minimize: true,                          // se le indica que si se va a optimizar
