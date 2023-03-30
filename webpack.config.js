@@ -1,6 +1,7 @@
 /* eslint no-multi-spaces: ["error", { ignoreEOLComments: true }] */
 
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',                          // es la direccion donde se vas an a ejecutar el js, que es lo que prepara webpack
@@ -22,5 +23,12 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: './index.html'
+    })
+  ]
 };
