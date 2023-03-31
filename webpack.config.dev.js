@@ -14,6 +14,7 @@ module.exports = {
     assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   mode: 'development',
+  // watch: true,                  /* para activar el modo watch indefinidamente */
   resolve: {
     extensions: ['.js'],
     alias: {
